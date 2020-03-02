@@ -34,7 +34,7 @@ function watchSass(){
     gulp.watch("*.html").on('change',browserSync.reload);
 }
 gulp.task('deploy', function () {
-    return gulp.src("./Animation/**/*")
+    return gulp.src("./animation/**/*")
         .pipe(ghPages())
 });
 gulp.task('default',gulp.parallel(sync,watchSass))
