@@ -28,12 +28,15 @@ body {
             font-weight: 600;
             border-radius: 5px;
             font-size: 16px;
+            transition: 3s;
         }
 
         a:hover {
-            background: #363636;
+            background: red;
             color: #fff;
-            transition: all .6s;
+           
+        
+            
         }
 
         a:not(:hover) {
@@ -163,7 +166,8 @@ body {
         }
 
         a {
-            font-size: 12px;
+            font-size: 10px;
+            padding:2px 5px;
           
         }
     }
