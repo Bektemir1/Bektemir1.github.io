@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animation</title>
-    <script src="https://kit.fontawesome.com/b10bda6b74.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="css/animate.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.min.css">
+     <script src="https://kit.fontawesome.com/b10bda6b74.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
     <header class="header">
         <div class="container">
-            <div class="header__top">
+            <div class="header__top wow fadeInLeft">
                 <p class="first_p">Видео-ролики для бизнеса<br />
                     в Казани</a>
                     <div class="order">
@@ -36,7 +37,7 @@
 
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
+                    <ul class="wow fadeInRight navbar-nav">
                         <li class="nav-item ">
                             <a class="nav-link" href="#">Главная </a>
                         </li>
@@ -65,21 +66,21 @@
     </header>
 
 
-    <div class="main">
-        <div class="main__content">
-            <h1>BEAM LIGHT</h1>
-            <h2>Создание видео-роликов и проведение съемки </h2>
-            <p>для решения маркетинговых , имиджевых и <br />презентационных задач</p>
+    <div class=" main">
+        <div class=" main__content">
+            <h1 class="wow zoomIn">BEAM LIGHT</h1>
+            <h2 class="wow zoomIn">Создание видео-роликов и проведение съемки </h2>
+            <p class="wow zoomIn">для решения маркетинговых , имиджевых и <br />презентационных задач</p>
 
 
-            <button>Смотреть видео</button>
+            <button class="wow zoomIn "data-wow-delay='1s'>Смотреть видео</button>
         </div>
     </div>
 
 
 
     <div class="mission">
-        <div class="header-title">
+        <div class="wow fadeInUp header-title">
             <h2>Какие задачи мы решаем</h2>
             <span class="line"></span>
             <p>Список наших услуг не ограничивается только видами работ, представленными ниже. Большой опыт всех членов
@@ -90,7 +91,7 @@
         </div>
 
         <div class="container-fluid">
-            <div class="row">
+            <div class="row wow fadeInUp">
                 <div class="col-lg-3">
                     <div class="mission__wrapper">
                         <img src="./img/Forma_1.png" />
@@ -136,14 +137,14 @@
 
     <div class="container-fluid">
         <div class="portfolio">
-            <div class="header-title">
-                <h2>Какие задачи мы решаем</h2>
+            <div class="wow fadeInUp header-title">
+                <h2>Портфолио</h2>
                 <span class="line"></span>
                 <p>Посмотрите наши последние работы</p>
             </div>
 
 
-            <div class="row">
+            <div class="wow fadeInUp row">
                 <div class="col-lg-3 col-md-4 col-sm-6 p-0">
                     <div class="portfolio__item">
                         <div class="overlay">
@@ -236,8 +237,8 @@
     </div>
 
     <div class="cost">
-        <div class="header-title">
-            <h2>Какие задачи мы решаем</h2>
+        <div  class="wow fadeInUp header-title">
+            <h2>Интересует стоимость?</h2>
             <span class="line"></span>
         </div>
 
@@ -245,7 +246,7 @@
             <div class="row">
                 <div class="col-lg-8 col-md-10 m-auto ">
                     <div class="cost__wrapper">
-                        <div class="cost__wrapper__left">Стоимость видеоролика зависит от длительности и сложности
+                        <div class="wow fadeInLeft cost__wrapper__left">Стоимость видеоролика зависит от длительности и сложности
                             съемок, задействованных актёров и декораций, наличия графики, спецэффектов и ещё 5-10
                             параметров.
 
@@ -254,13 +255,13 @@
 
                             Мы свяжемся с вами в ближайшее время, обсудим детали будущего ролика, предложим различные
                             варианты сценария и рассчитаем смету.</div>
-                        <div class="cost__wrapper__right">
+                        <div class="wow fadeInRight cost__wrapper__right">
                             <img src="./img/cutmypic.png" />
                         </div>
 
 
                     </div>
-                    <a href="/" class="cost-price">Узнать цену</a>
+                    <a href="/" class="wow zoomIn cost-price" data-wow-delay='1s'>Узнать цену</a>
                 </div>
             </div>
         </div>
@@ -272,7 +273,7 @@
     <footer>
         <h2>Контакты</h2>
         <div class="container">
-            <div class="footer-contact">
+            <div class="wow fadeInUp footer-contact">
                 <div class="footer-info">
                     <h1>BEAM light</h1>
                     <p>Видео-ролики для бизнеса
@@ -306,10 +307,13 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script>
         $('.burger').on('click', function () {
             $('.header__navbar').toggleClass('cllapse');
         })
+
+        new WOW().init();
     </script>
 </body>
 
