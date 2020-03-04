@@ -4,6 +4,9 @@ body {
     font-size: 14px;
     font-family: "Roboto";
 }
+html{
+    scroll-behavior: smooth;
+}
 
 .header {
     &__top {
@@ -122,8 +125,13 @@ body {
             border-radius: 20px;
             text-decoration: none;
             border: none;
-
-
+        }
+        .mouse img{
+            display: block;
+            margin: 0 auto;
+            width: 20px;
+            margin-top: 100px;
+            height: 30px;
         }
 
     }
@@ -327,7 +335,8 @@ footer {
         justify-content: space-between;
             .number{
                 p{
-                    font-size: 26px;
+                    font-size: 24px;
+                    margin: 0;
                     text-transform: uppercase;
                 }
                 span{
@@ -341,6 +350,7 @@ footer {
                 background-color: #059feb;
                 padding: 10px;
                 font-size: 18px;
+                margin-bottom: 20px;
               
             }
             p{
