@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animation</title>
-   <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.min.css">
-     <script src="https://kit.fontawesome.com/b10bda6b74.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b10bda6b74.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -64,6 +64,7 @@
             </div>
         </nav>
     </header>
+    <a href="#" id="back-to-top" title="Back to top">&uarr;</a>
 
 
     <div class=" main">
@@ -73,16 +74,16 @@
             <p class="wow zoomIn">для решения маркетинговых , имиджевых и <br />презентационных задач</p>
 
 
-            <button class="wow zoomIn "data-wow-delay='1s'>Смотреть видео</button>
+            <button class="wow zoomIn " data-wow-delay='1s'>Смотреть видео</button>
 
 
-           <a href="#mission" class="mouse"><img src="./img/мышка.png"></a>
+            <a href="#mission" class="mouse"><img src="./img/мышка.png"></a>
         </div>
     </div>
 
 
 
-    <div id="mission"class="mission">
+    <div id="mission" class="mission">
         <div class="wow fadeInUp header-title">
             <h2>Какие задачи мы решаем</h2>
             <span class="line"></span>
@@ -240,7 +241,7 @@
     </div>
 
     <div class="cost">
-        <div  class="wow fadeInUp header-title">
+        <div class="wow fadeInUp header-title">
             <h2>Интересует стоимость?</h2>
             <span class="line"></span>
         </div>
@@ -249,7 +250,8 @@
             <div class="row">
                 <div class="col-lg-8 col-md-10 m-auto ">
                     <div class="cost__wrapper">
-                        <div class="wow fadeInLeft cost__wrapper__left">Стоимость видеоролика зависит от длительности и сложности
+                        <div class="wow fadeInLeft cost__wrapper__left">Стоимость видеоролика зависит от длительности и
+                            сложности
                             съемок, задействованных актёров и декораций, наличия графики, спецэффектов и ещё 5-10
                             параметров.
 
@@ -280,7 +282,7 @@
                 <div class="footer-info">
                     <h1>BEAM light</h1>
                     <p>Видео-ролики для бизнеса
-                        <br/>в Казани</p>
+                        <br />в Казани</p>
                 </div>
                 <div class="social-icons">
                     <i class="fab fa-facebook"></i>
@@ -317,6 +319,30 @@
         })
 
         new WOW().init();
+
+
+
+        if ($('#back-to-top').length) {
+            var scrollTrigger = 100, // px
+                backToTop = function () {
+                    var scrollTop = $(window).scrollTop();
+                    if (scrollTop > scrollTrigger) {
+                        $('#back-to-top').addClass('show');
+                    } else {
+                        $('#back-to-top').removeClass('show');
+                    }
+                };
+            backToTop();
+            $(window).on('scroll', function () {
+                backToTop();
+            });
+            $('#back-to-top').on('click', function (e) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 700);
+            });
+        }
     </script>
 </body>
 
