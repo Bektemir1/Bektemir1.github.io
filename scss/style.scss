@@ -209,13 +209,13 @@ html{
 
 .portfolio {
     &__item {
-        background: url("../img/img_1.png")no-repeat center center;
+        background: url("../img/img_1.png") no-repeat center center;
         background-size: cover;
         height: 300px;
         overflow: hidden;
 
         &:hover .overlay {
-            transform: translateX(0%)rotate(0deg);
+            transform: translateX(0%) translateY(0) rotate(0deg);
             transition: .4s;
 
         }
@@ -229,7 +229,7 @@ html{
             align-items: center;
             text-align: center;
             color: #fff;
-            transform: translateX(100%)rotate(90deg);
+            transform: translateX(100%) translateY(-100%) rotate(90deg);
 
             h2 {
                 font-weight: 700;
